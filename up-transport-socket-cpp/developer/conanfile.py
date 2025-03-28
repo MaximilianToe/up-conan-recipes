@@ -25,7 +25,7 @@ class UpClientSocket(ConanFile):
     default_options = {
             "shared": False,
             "fPIC": True,
-            "fork": "eclipse-uprotocol/up-tck",
+            "fork": "MaximilianToe/up-tck",
             "commitish": "main"}
 
     requires = "up-core-api/[~1.6, include_prerelease]", "spdlog/[~1.13]", "protobuf/[~3.21]", "up-cpp/[^1.0, include_prerelease]", "fmt/10.2.1"
