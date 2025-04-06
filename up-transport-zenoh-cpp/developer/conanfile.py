@@ -25,15 +25,15 @@ class upZenohTransportRecipe(ConanFile):
     default_options = {
             "shared": False,
             "fPIC": True,
-            "fork": "MaximilianToe/up-transport-zenoh-cpp",
-            "commitish": "update_signature"}
+            "fork": "eclipse-uprotocol/up-transport-zenoh-cpp",
+            "commitish": "main"}
 
     requires = "zenohcpp/[1.2.1]", "up-core-api/[~1.6, include_prerelease]", "up-cpp/[^1.0, include_prerelease]", "spdlog/[~1.13]", "protobuf/[~3.21]"
     test_requires = "gtest/[~1.14]"
 
     def init(self):
-        self.fork = self.options.get_safe("fork", "MaximilianToe/up-transport-zenoh-cpp")
-        self.commitish = self.options.get_safe("commitish", "update_signature")
+        self.fork = self.options.get_safe("fork", "eclipse-uprotocol/up-transport-zenoh-cpp")
+        self.commitish = self.options.get_safe("commitish", "main")
 
     def source(self):
 
