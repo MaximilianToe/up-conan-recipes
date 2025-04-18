@@ -26,7 +26,7 @@ class upZenohTransportRecipe(ConanFile):
             "shared": False,
             "fPIC": True,
             "fork": "MaximilianToe/up-transport-zenoh-cpp",
-            "commitish": "main"}
+            "commitish": "fix_sample_to_umessage"}
 
     requires = "zenohcpp/[1.2.1]", "up-core-api/[~1.6, include_prerelease]", "up-cpp/[^1.0, include_prerelease]", "spdlog/[~1.13]", "protobuf/[~3.21]"
     test_requires = "gtest/[~1.14]"
