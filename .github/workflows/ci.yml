@@ -99,10 +99,6 @@ jobs:
         run: |
           conan create --version 1.6.1-dev up-core-api/developer
 
-      - name: Build up-cpp conan package
-        shell: bash
-        run: |
-          conan create --version 1.0.1-dev --build=missing up-cpp/developer
 
       - name: Build zenohc conan package
         shell: bash
@@ -116,15 +112,21 @@ jobs:
           conan create --version 1.0.0-rc5 zenohcpp-tmp/from-source
           conan create --version 1.2.1 zenohcpp-tmp/from-source
 
+
+      - name: Build up-cpp conan package
+        shell: bash
+        run: |
+          conan create --version 1.0.1-dev --build=missing up-cpp/developer
+
+#      - name: Build up-transport-socket-cpp conan package
+#        shell: bash
+#        run: |
+#          conan create --version 1.0.0-dev --build=missing up-transport-socket-cpp/developer/
+
       - name: Build up-transport-zenoh-cpp conan package
         shell: bash
         run: |
           conan create --version 1.0.0-dev --build=missing up-transport-zenoh-cpp/developer
-
-      - name: Build up-transport-socket-cpp conan package
-        shell: bash
-        run: |
-          conan create --version 1.0.0-dev --build=missing up-transport-socket-cpp/developer/
 
       - name: List conan packages
         shell: bash
